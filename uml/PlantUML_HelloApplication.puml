@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class HelloApplication {
+  void start(Stage stage)
+  void main(String[] args)
+}
+
+
+@enduml

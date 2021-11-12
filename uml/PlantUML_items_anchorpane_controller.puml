@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class items_anchorpane_controller {
+
+          private AnchorPane items_list;
+
+
+          void show_all_items(ActionEvent event)
+
+
+          void show_complete(ActionEvent event)
+
+
+          void show_incomplete(ActionEvent event)
+}
+
+
+@enduml

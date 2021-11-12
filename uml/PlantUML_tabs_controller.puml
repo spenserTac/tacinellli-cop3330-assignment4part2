@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class tabs_controller {
+    private Stage stage;
+        private Scene scene;
+        private Parent root;
+
+
+        public void switch_to_selected_tab(ActionEvent event)
+
+        public void close_current_tab(ActionEvent event)
+}
+
+
+@enduml

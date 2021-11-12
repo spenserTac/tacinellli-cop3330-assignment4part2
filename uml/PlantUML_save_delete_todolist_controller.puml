@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class save_delete_todolist_controller {
+    void new_todolist(ActionEvent event)
+
+
+    void remove_todolist(ActionEvent event)
+
+    void open_todolist(ActionEvent event)
+
+    void open_multiple_todolists(ActionEvent event)
+
+    void save_current_todolist(ActionEvent event)
+
+    void save_all_todolists_as(ActionEvent event)
+
+    void save_current_todolist_as(ActionEvent event)
+}
+
+
+@enduml
