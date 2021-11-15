@@ -34,6 +34,7 @@ public class tabs_controller {
         // "<title>_todolist.fxml".
 
         // Then display that .fxml file as the current scene.
+        System.out.println("testing");
     }
 
     @FXML
@@ -45,5 +46,6 @@ public class tabs_controller {
         // to find the correct .fxml file (naming convention
         // of "<title>_todolist.fxml"), and use the "switch_to_selected_tab"
         // to display that .fxml file.
+        System.out.println("testing");
     }
 }

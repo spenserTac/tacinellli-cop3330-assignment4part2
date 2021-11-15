@@ -21,6 +21,7 @@ public class items_anchorpane_controller {
 
         // The "tabs_controller" class will be used
         // to display the .fxml.
+        System.out.println("testing");
     }
 
     @FXML
@@ -35,6 +36,7 @@ public class items_anchorpane_controller {
         // id="complete_status"). If the item's RadioButton's
         // "selected" parameter is equal to "true", then this
         // item will be displayed, else, it won't.
+        System.out.println("testing");
     }
 
     @FXML
@@ -49,5 +51,6 @@ public class items_anchorpane_controller {
         // id="complete_status"). If the item's RadioButton's
         // "selected" parameter is equal to "false", then this
         // item will be displayed, else, it won't.
+        System.out.println("testing");
     }
 }

@@ -18,6 +18,7 @@ public class save_delete_todolist_controller {
 
         // Then use "tabs_controller" to display that
         // new file.
+        System.out.println("testing");
     }
 
     @FXML
@@ -30,6 +31,7 @@ public class save_delete_todolist_controller {
         // in the .fxml file. When the match is found,
         // the .fxml file will be deleted, and the current
         // tab will be closed, using the "tabs_controller" class.
+        System.out.println("testing");
     }
 
     @FXML
@@ -41,6 +43,7 @@ public class save_delete_todolist_controller {
 
         // The "tab_controller" class will be used to
         // display the selected todolist.
+        System.out.println("testing");
     }
 
     @FXML
@@ -59,7 +62,7 @@ public class save_delete_todolist_controller {
         // The dir will be looped through, and the
         // "open_todolist" function above will be called
         // for each todolist.
-
+        System.out.println("testing");
     }
 
     @FXML
@@ -69,6 +72,7 @@ public class save_delete_todolist_controller {
         // loop through all .fxml files, find the matching file,
         // with naming convention "<title>_todolist.fxml", and
         // update that .fxml file.
+        System.out.println("testing");
     }
 
     // All the todolists within the tabs system
@@ -84,6 +88,7 @@ public class save_delete_todolist_controller {
         // and call the above "save_current_todolist" function
         // for each todolist. If a todolist was created, but never saved,
         // the function below, "save_current_todolist_as" will be called.
+        System.out.println("testing");
     }
 
     @FXML
@@ -93,5 +98,6 @@ public class save_delete_todolist_controller {
 
         // Create fxml. file in "resources" dir, with the naming
         // convention of "<title>_todolist.fxml".
+        System.out.println("testing");
     }
 }

@@ -1,10 +1,5 @@
 package com.example.gui_assignment;
 
-/*
- * UCF COP3330 Fall 2021 Assignment 4 Solution
- * Copyright 2021 Spenser Tacinelli
- */
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

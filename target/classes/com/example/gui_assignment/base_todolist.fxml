@@ -15,26 +15,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-    fx:controller="com.example.gui_assignment.guiController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui_assignment.gui_controller">
     <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
-            <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open…" />
-            <Menu mnemonicParsing="false" text="Open Recent" />
+            <MenuItem fx:id="new_todolist" mnemonicParsing="false" onAction="#new_todolist" text="New" />
+            <MenuItem mnemonicParsing="false" onAction="#open_todolist" text="Open…" />
+                  <MenuItem mnemonicParsing="false" onAction="#open_multiple_todolists" text="Open Multiple.." />
+                  <MenuItem mnemonicParsing="false" onAction="#remove_todolist" text="Remove.." />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" text="Close" />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save Current List As…" />
-                  <MenuItem mnemonicParsing="false" text="Save All Lists As…" />
-            <MenuItem mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Quit" />
+            <MenuItem mnemonicParsing="false" onAction="#save_current_todolist" text="Save" />
+            <MenuItem mnemonicParsing="false" onAction="#save_current_todolist_as" text="Save As…" />
+                  <MenuItem mnemonicParsing="false" onAction="#save_all_todolists_as" text="Save All As…" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Edit">
@@ -61,21 +56,21 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TextField promptText="Title" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0" />
+                              <TextField fx:id="todolist_title" onAction="#edit_title" promptText="Title" text="Todo List" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0" />
                               <MenuButton mnemonicParsing="false" text="Filter" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                                 <items>
-                                  <MenuItem mnemonicParsing="false" text="Show All Items" />
-                                  <MenuItem mnemonicParsing="false" text="Show Only Completed" />
-                                    <MenuItem mnemonicParsing="false" text="Show Only Incomplete" />
+                                  <MenuItem mnemonicParsing="false" onAction="#show_all_items" text="Show All Items" />
+                                  <MenuItem mnemonicParsing="false" onAction="#show_complete" text="Show Only Completed" />
+                                    <MenuItem mnemonicParsing="false" onAction="#show_incomplete" text="Show Only Incomplete" />
                                 </items>
                               </MenuButton>
-                              <AnchorPane layoutY="62.0" prefHeight="88.0" prefWidth="640.0" AnchorPane.bottomAnchor="192.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+                              <AnchorPane fx:id="items_list" layoutY="62.0" prefHeight="88.0" prefWidth="640.0" AnchorPane.bottomAnchor="192.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
                                  <children>
-                                    <AnchorPane prefHeight="279.5" prefWidth="640.0" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                    <AnchorPane fx:id="item" prefHeight="279.5" prefWidth="640.0" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
                                        <children>
-                                          <RadioButton mnemonicParsing="false" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="5.0" />
-                                          <TextField promptText="Description" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0" />
-                                          <DatePicker AnchorPane.leftAnchor="465.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0" />
+                                          <RadioButton fx:id="complete_status" mnemonicParsing="false" onAction="#mark_complete" selected="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="5.0" />
+                                          <TextField onAction="#add_desciption" promptText="Description" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0" />
+                                          <DatePicker onAction="#add_date" AnchorPane.leftAnchor="465.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0" />
                                           <Button mnemonicParsing="false" onAction="#delete_item" text="Delete" textFill="RED" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="4.0">
                                              <font>
                                                 <Font size="10.0" />

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui_assignment.guiController">
+    <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem fx:id="new_todolist" mnemonicParsing="false" onAction="#new_todolist" text="New" />
+            <MenuItem mnemonicParsing="false" onAction="#open_todolist" text="Open…" />
+                  <MenuItem mnemonicParsing="false" onAction="#open_multiple_todolists" text="Open Multiple.." />
+                  <MenuItem mnemonicParsing="false" onAction="#remove_todolist" text="Remove.." />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" onAction="#save_current_todolist" text="Save" />
+            <MenuItem mnemonicParsing="false" onAction="#save_current_todolist_as" text="Save As…" />
+                  <MenuItem mnemonicParsing="false" onAction="#save_all_todolists_as" text="Save All As…" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TabPane prefHeight="373.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Untitled Tab 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="todolist_title" onAction="#edit_title" promptText="Title" text="Todo List" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0" />
+                              <MenuButton mnemonicParsing="false" text="Filter" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#show_all_items" text="Show All Items" />
+                                  <MenuItem mnemonicParsing="false" onAction="#show_complete" text="Show Only Completed" />
+                                    <MenuItem mnemonicParsing="false" onAction="#show_incomplete" text="Show Only Incomplete" />
+                                </items>
+                              </MenuButton>
+                              <AnchorPane fx:id="items_list" layoutY="62.0" prefHeight="53.0" prefWidth="640.0" AnchorPane.bottomAnchor="227.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+                                 <children>
+                                    <ListView fx:id="list_of_items" layoutY="59.0" prefHeight="176.0" prefWidth="640.0">
+                                       <padding>
+                                          <Insets bottom="20.0" />
+                                       </padding>
+                                    </ListView>
+                                    <AnchorPane fx:id="item" layoutY="-137.0" prefHeight="0.0" prefWidth="640.0" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                       <children>
+                                          <RadioButton fx:id="complete_status" mnemonicParsing="false" onAction="#mark_complete" selected="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="5.0" />
+                                          <TextField onAction="#add_desciption" promptText="Description" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0" />
+                                          <DatePicker onAction="#add_date" AnchorPane.leftAnchor="465.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0" />
+                                          <Button mnemonicParsing="false" onAction="#delete_item" text="Delete" textFill="RED" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="4.0">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="add_item_button" layoutX="300.0" layoutY="310.0" mnemonicParsing="false" onAction="#add_item" text="Add" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="310.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
