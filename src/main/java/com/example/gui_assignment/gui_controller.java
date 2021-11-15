@@ -7,15 +7,19 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 
 
 public class gui_controller implements Initializable {
+
+    //
+    @FXML
+    private Button deleteEventButton;
+
+    //
+    @FXML
+    private CheckBox check_box;
 
     @FXML
     private Button addEventButton;
@@ -34,7 +38,7 @@ public class gui_controller implements Initializable {
     private void addEventHandler(ActionEvent e)
     {
         //create new Event by getting values from gui
-        var newEvent = new LocalEvent(datePicker.getValue(), eventDescriptionTextField.getText());
+        var newEvent = new LocalEvent(datePicker.getValue(), eventDescriptionTextField.getText(), 0, 0);
 
         // add the new event to the list
         eventListView.getItems().add(newEvent);
@@ -45,6 +49,44 @@ public class gui_controller implements Initializable {
 
         // set text empty
         eventDescriptionTextField.setText("");
+    }
+
+    //
+    @FXML
+    private void deleteEventHandler(ActionEvent e)
+    {
+        //create new Event by getting values from gui
+
+        //var newEvent = new LocalEvent(datePicker.getValue(), eventDescriptionTextField.getText());
+
+        // add the new event to the list
+        eventListView.getItems().remove(2);
+
+
+        //datePicker.setValue(LocalDate.now());
+
+
+        // eventDescriptionTextField.setText("");
+    }
+
+    //
+    @FXML
+    private  void checkEventHandler(ActionEvent e){
+
+        //var newEvent = new LocalEvent(datePicker.getValue(), eventDescriptionTextField.getText());
+          var newEvent = new LocalEvent(datePicker.getValue(), eventDescriptionTextField.getText(), 0, 1);
+
+        eventListView.getItems().add(newEvent);
+    }
+
+    //
+    @FXML
+    private  void uncheckEventHandler(ActionEvent e){
+
+        //var newEvent = new LocalEvent(datePicker.getValue(), eventDescriptionTextField.getText());
+        var newEvent = new LocalEvent(datePicker.getValue(), eventDescriptionTextField.getText(), 0, 0);
+
+        eventListView.getItems().add(newEvent);
     }
 
     public Object[] getEvents()  {
