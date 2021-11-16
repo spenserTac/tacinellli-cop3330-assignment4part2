@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
+import javafx.scene.text.Text;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -17,26 +18,16 @@ public class LocalEvent implements Serializable  {
     private LocalDate date;
 
     private String description;
-
-    //
-//    public  CheckBox checkbox = new CheckBox(" ");
-//    public  Button delete_button = new Button("Delete");
-////    public TextField details = new TextField();
-////    public DatePicker date_picker = new DatePicker();
-//
-//    public HBox hbox = new HBox(10, checkbox, description, date, delete_button);
-//
-//    @FXML
-//    private ListView<HBox> list_of_items;
-//    ObservableList<HBox> list = FXCollections.observableArrayList(hbox);
+    private int number;
+    private int check;
 
 
-    public LocalEvent(LocalDate date, String description, int delete_button, int check_box) {
+
+    public LocalEvent(LocalDate date, String description, int number, int check) {
         this.date = date;
         this.description = description;
-
-        //
-
+        this.number = number;
+        this.check = check;
 
     }
 
@@ -44,27 +35,41 @@ public class LocalEvent implements Serializable  {
         return date;
     }
 
+    public int setDate(LocalDate new_date) {
+        this.date = new_date;
+        return 0;
+    }
+
+
     public String getDescription() {
         return description;
     }
 
-    //
-    public int getCheck(){
+    public int setDescription(String new_string) {
+        this.description = new_string;
         return 0;
     }
 
-    //
-
-
-    @Override
-    public HBox display_item(){
-
+    public int setCheck(int ncheck){
+        this.check = ncheck;
+        return 0;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
+    public int getCheck() {
+        return check;
+    }
+
+
+
     // this makes LocalEvents dispaly nicely in GUI
-//    @Override
-//    public String toString() {
-//        return date + " - " + description;
-//    }
+    @Override
+    public String toString() {
+        return number + "| " + check + " |    " + date + "  -  " + description;
+    }
+
 
 }

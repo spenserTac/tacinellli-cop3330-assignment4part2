@@ -1,5 +1,3 @@
-
-
 package com.example.gui_assignment;
 
 import java.io.FileInputStream;
