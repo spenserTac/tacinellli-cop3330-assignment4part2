@@ -184,7 +184,7 @@ public class gui_controller implements Initializable {
     }
 
     @FXML
-    ListView<LocalEvent> filtered_events;
+    public ListView<LocalEvent> filtered_events;
     int m = 0;
 
     @FXML
@@ -199,11 +199,12 @@ public class gui_controller implements Initializable {
                 filtered_events.getItems().add(instance);
             }
 
-            if(eventListView.getItems().size() == n+1){
+            if(eventListView.getItems().size() == n+1) {
                 return;
             }
 
         }
+
 
 //        int k = 0;
 //        while(true){
@@ -220,7 +221,19 @@ public class gui_controller implements Initializable {
     @FXML
     private void fCEventHandler(ActionEvent e)
     {
-        System.out.println("none");
+        int n = 0;
+        while(true){
+            LocalEvent instance = eventListView.getItems().get(n);
+
+            if(instance.getCheck() == 0){
+                filtered_events.getItems().add(instance);
+            }
+
+            if(eventListView.getItems().size() == n+1) {
+                return;
+            }
+
+        }
 
     }
 

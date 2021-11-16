@@ -20,13 +20,13 @@
             <Button fx:id="deleteEventButton" layoutX="545.0" layoutY="61.0" mnemonicParsing="false" onAction="#deleteEventHandler" text="Delete" />
             <Button fx:id="checkEventButton" layoutX="425.0" layoutY="59.0" mnemonicParsing="false" onAction="#checkEventHandler" text="Check" />
 
-            <TextField fx:id="changeDescTextField" layoutX="461.0" layoutY="104.0" prefHeight="26.0" prefWidth="229.0" promptText="change desc" />
+            <TextField fx:id="changeDescTextField" layoutX="461.0" layoutY="104.0" prefHeight="26.0" prefWidth="229.0" promptText="Change Description" />
             <Button fx:id="changeDescEventButton" onAction="#changeDescEventHandler" layoutX="346.0" layoutY="104.0" mnemonicParsing="false" text="Change Desc." />
 
-            <Button fx:id="changeDateButton" onAction="#changeDateEventHandler" layoutX="350.0" layoutY="141.0" prefHeight="26.0" prefWidth="116.0" text="change date" />
+            <Button fx:id="changeDateButton" onAction="#changeDateEventHandler" layoutX="350.0" layoutY="141.0" prefHeight="26.0" prefWidth="116.0" text="Change Date" />
             <DatePicker fx:id="changeDateField" layoutX="514.0" layoutY="142.0"/>
 
-            <TextField fx:id="instancenumberTextField" layoutX="444.0" layoutY="18.0" prefHeight="26.0" prefWidth="136.0" promptText="#" />
+            <TextField fx:id="instancenumberTextField" layoutX="484.0" layoutY="18.0" prefHeight="26.0" prefWidth="50.0" promptText="#" />
 
             <Button fx:id="fAllButton" onAction="#fAllEventHandler" layoutX="60.0" layoutY="51.0" prefHeight="26.0" prefWidth="116.0" text="Filter All" />
             <Button fx:id="fICButton" onAction="#fICEventHandler" layoutX="60.0" layoutY="81.0" prefHeight="26.0" prefWidth="116.0" text="Filter Incomplete" />

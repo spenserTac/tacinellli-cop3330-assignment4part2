@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class EventSerializer {
+    void serialize(Object[] events) throws IOException
+    LocalEvent[] deserialize() throws IOException, ClassNotFoundException
+    EventSerializer()
+}
+
+
+
+@enduml

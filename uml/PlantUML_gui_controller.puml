@@ -1,0 +1,66 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class gui_controller {
+        @FXML
+            private Button addEventButton;
+
+            //
+            @FXML
+            private TextField instancenumberTextField;
+
+            @FXML
+            private Button deleteEventButton;
+
+            @FXML
+            private Button checkEventButton;
+
+
+            @FXML
+            private Button changeDescEventButton;
+            @FXML
+            private TextField changeDescTextField;
+
+            @FXML
+            private Button changeDateButton;
+            @FXML
+            private DatePicker changeDateField;
+            //
+
+            @FXML
+            private TextField eventDescriptionTextField;
+
+            @FXML
+            private DatePicker datePicker;
+
+            @FXML
+            private ListView<LocalEvent> eventListView;
+
+            @FXML
+            private Button clearList;
+
+            @FXML
+            private Button fAllButton;
+            @FXML
+            private Button fICButton;
+            @FXML
+            private Button fCButton;
+
+            public int i = 1;
+
+
+      void addEventHandler(ActionEvent e)
+      Object[] getEvents()
+      void clearList(ActionEvent e)
+      void deleteEventHandler(ActionEvent e)
+      void checkEventHandler(ActionEvent e)
+      void changeDescEventHandler(ActionEvent e)
+      void changeDateEventHandler(ActionEvent e)
+      void fAllEventHandler(ActionEvent e)
+      void fICEventHandler(ActionEvent e)
+      void fCEventHandler(ActionEvent e)
+      void initialize(URL arg0, ResourceBundle arg1)
+}
+
+
+@enduml

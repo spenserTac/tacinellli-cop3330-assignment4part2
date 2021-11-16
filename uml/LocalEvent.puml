@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class LocalEvent {
+    private static final long serialVersionUID = 1L;
+
+        private LocalDate date;
+
+        private String description;
+        private int number;
+        private int check;
+
+        LocalEvent(LocalDate date, String description, int number, int check)
+
+        LocalDate getDate()
+        String getDescription()
+        int setDescription(String new_string)
+        int setCheck(int ncheck)
+        int getNumber()
+        int getCheck()
+
+        @Override
+        String toString()
+
+
+
+}
+
+
+
+@enduml
